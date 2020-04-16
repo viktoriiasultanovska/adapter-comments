@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
     && pecl install apcu xdebug-2.7.0RC2 \
     && docker-php-ext-enable apcu xdebug \
     && docker-php-ext-configure zip --with-libzip \
-    && docker-php-ext-install zip
+    && docker-php-ext-install zip \
+    && docker-php-ext-install mbstring
 
 WORKDIR /app
 
